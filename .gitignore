@@ -1,0 +1,30 @@
+# Compiled Java class files
+*.class
+
+# Eclipse project & workspace metadata
+.classpath
+.project
+.settings/
+.metadata/
+bin/
+build/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Dynamic Web Project / Server build outputs
+target/
+*.war
+*.ear
+*.jar
+
+# Tomcat / Server runtime logs & temp files
+*.log
+Servers/
+
+# OS-specific files
+.DS_Store
+Thumbs.db

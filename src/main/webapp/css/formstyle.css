@@ -1,0 +1,199 @@
+
+/* =========================================
+   Card Container
+   ========================================= */
+.card {
+	background-color: var(--card-bg);
+	border-radius: var(--radius-lg);
+	box-shadow: var(--shadow-lg);
+	border: 1px solid rgba(226, 232, 240, 0.9);
+	overflow: hidden;
+}
+
+.card-header {
+	padding: 1.75rem 2rem;
+	border-bottom: 1px solid #f1f5f9;
+	background-color: #fafbfc;
+}
+
+.card-header h2 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: var(--text-main);
+	margin-bottom: 0.25rem;
+}
+
+.card-header p {
+	font-size: 0.875rem;
+	color: var(--text-muted);
+}
+
+
+/* =========================================
+   Form & Grid Styling
+   ========================================= */
+.book-form {
+	padding: 2rem;
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.25rem 1.5rem;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group.full-width {
+	grid-column: 1/-1;
+}
+
+label {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: #334155;
+	margin-bottom: 0.45rem;
+}
+
+.required {
+	color: var(--danger-color);
+	margin-left: 2px;
+}
+
+input[type="text"], input[type="number"], select {
+	width: 100%;
+	padding: 0.65rem 0.9rem;
+	font-family: inherit;
+	font-size: 0.95rem;
+	color: var(--text-main);
+	background-color: #ffffff;
+	border: 1.5px solid var(--border-color);
+	border-radius: var(--radius-md);
+	transition: var(--transition);
+	outline: none;
+}
+
+input::placeholder {
+	color: #94a3b8;
+}
+
+input:hover, select:hover {
+	border-color: #94a3b8;
+}
+
+input:focus, select:focus {
+	border-color: var(--border-focus);
+	box-shadow: 0 0 0 3.5px rgba(37, 99, 235, 0.15);
+}
+
+/* Currency Prefix Wrapper */
+.input-with-prefix {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.input-with-prefix .prefix {
+	position: absolute;
+	left: 0.9rem;
+	font-weight: 600;
+	color: var(--text-muted);
+	pointer-events: none;
+}
+
+.input-with-prefix input {
+	padding-left: 2rem;
+}
+
+/* Custom Dropdown Arrow */
+select {
+	appearance: none;
+	background-image:
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 0.9rem center;
+	padding-right: 2.5rem;
+	cursor: pointer;
+}
+
+/* =========================================
+   Buttons & Footer
+   ========================================= */
+.form-actions {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.85rem;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #f1f5f9;
+}
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.7rem 1.4rem;
+	font-family: inherit;
+	font-size: 0.95rem;
+	font-weight: 600;
+	border-radius: var(--radius-md);
+	cursor: pointer;
+	transition: var(--transition);
+	border: none;
+}
+
+.btn-primary {
+	background-color: var(--primary-color);
+	color: #ffffff;
+	box-shadow: 0 2px 6px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+	background-color: var(--primary-hover);
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:active {
+	transform: translateY(0);
+}
+
+.btn-secondary {
+	background-color: #f1f5f9;
+	color: #475569;
+}
+
+.btn-secondary:hover {
+	background-color: #e2e8f0;
+	color: var(--text-main);
+}
+
+.app-footer {
+	text-align: center;
+	margin-top: 1.5rem;
+	font-size: 0.825rem;
+	color: var(--text-muted);
+}
+
+/* =========================================
+   Responsive Design (Mobile)
+   ========================================= */
+@media ( max-width : 640px) {
+	.form-grid {
+		grid-template-columns: 1fr;
+	}
+	.card-header, .book-form {
+		padding: 1.5rem;
+	}
+	.form-actions {
+		flex-direction: column-reverse;
+	}
+	.btn {
+		width: 100%;
+	}
+}
